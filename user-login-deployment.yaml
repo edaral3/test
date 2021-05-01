@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: user-login
+  name: user-login
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: user-login
+    spec:
+      containers:
+      - image: edaral3/ayd2grupo15_user_login:latest
+        name: user-login
+        ports:
+        - containerPort: 4003
+        resources: {}
+      restartPolicy: Always
+status: {}

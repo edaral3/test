@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: user-delete
+  name: user-delete
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: user-delete
+    spec:
+      containers:
+      - image: edaral3/ayd2grupo15_user_delete:latest
+        name: user-delete
+        ports:
+        - containerPort: 4005
+        resources: {}
+      restartPolicy: Always
+status: {}
