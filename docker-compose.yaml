@@ -1,0 +1,54 @@
+version: "2"
+
+services: 
+    frontend:
+        container_name: frontend
+        restart: always
+        image: edaral3/ayd2grupo15_frontend:latest
+        ports:
+            - "80:3000"
+    
+    productos:
+        container_name: productos
+        restart: always
+        image: edaral3/ayd2grupo15_productos:latest
+        ports:
+            - "9001:9001"
+    user_post:
+        container_name: user_post
+        restart: always
+        image: edaral3/ayd2grupo15_user_post:latest
+        ports:
+            - "4001:4001"
+
+    user_delete:
+        container_name: user_delete
+        restart: always
+        image: edaral3/ayd2grupo15_user_delete:latest
+        ports:
+            - "4005:4005"
+    user_put:
+        container_name: user_put
+        restart: always
+        image: edaral3/ayd2grupo15_user_put:latest
+        ports:
+            - "4004:4004"
+    user_get:
+        container_name: user_get
+        restart: always
+        image: edaral3/ayd2grupo15_user_get:latest
+        ports:
+            - "4002:4002"
+    user_login:
+        container_name: user_login
+        restart: always
+        image: edaral3/ayd2grupo15_user_login:latest
+        ports:
+            - "4003:4003"
+    ordenes:
+        container_name: ordenes
+        restart: always
+        image: edaral3/ayd2grupo15_productos:latest
+        ports:
+        - "4007:4007"
+
